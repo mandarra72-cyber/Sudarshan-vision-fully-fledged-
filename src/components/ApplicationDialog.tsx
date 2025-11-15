@@ -68,7 +68,7 @@ const ApplicationDialog = ({ open, onOpenChange }: ApplicationDialogProps) => {
 
       toast({
         title: "Application Submitted!",
-        description: `Your application number is: ${response.data.applicationNumber}`,
+        description: `Your application number is: ${(response as any).applicationId || 'Pending'}`,
       });
 
       onOpenChange(false);
